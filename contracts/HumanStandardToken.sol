@@ -49,7 +49,7 @@ contract HumanStandardToken is StandardToken {
     }
 
     /* Approves and then calls the receiving contract */
-    function approveAndCall(address _spender, uint256 _value, bytes _extraData)
+    function approveAndCall (address _spender, uint256 _value, bytes _extraData)
     returns (bool success) {
         allowed[msg.sender][_spender] = _value;
         Approval(msg.sender, _spender, _value);
@@ -65,7 +65,5 @@ contract HumanStandardToken is StandardToken {
         return true;
     }
 
-    function balanceOf(address _owner) external constant returns (uint256) {
-      return balances[_owner];
-  }
+
 }
