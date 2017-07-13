@@ -1,0 +1,1 @@
+fullcontract.transfer.sendTransaction(eth.accounts[1], 1000, {from: eth.accounts[0], gas: 100000})
